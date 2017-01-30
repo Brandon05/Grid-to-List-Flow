@@ -13,6 +13,12 @@
 		0211B19F1E3EB774008EBFB3 /* Grid_to_List_Flow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0211B19D1E3EB774008EBFB3 /* Grid_to_List_Flow.xcdatamodeld */; };
 		0211B1A11E3EB774008EBFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0211B1A01E3EB774008EBFB3 /* Assets.xcassets */; };
 		0211B1A41E3EB774008EBFB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0211B1A21E3EB774008EBFB3 /* LaunchScreen.storyboard */; };
+		0211B1AC1E3EBF20008EBFB3 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211B1AB1E3EBF20008EBFB3 /* GridFlowLayout.swift */; };
+		0211B1AE1E3EBF9C008EBFB3 /* ListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211B1AD1E3EBF9C008EBFB3 /* ListFlowLayout.swift */; };
+		0211B1B31E3ECEB7008EBFB3 /* PracticeCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211B1B11E3ECEB7008EBFB3 /* PracticeCell1.swift */; };
+		0211B1B41E3ECEB7008EBFB3 /* PracticeCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0211B1B21E3ECEB7008EBFB3 /* PracticeCell1.xib */; };
+		0211B1B71E3ECECA008EBFB3 /* PracticeCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211B1B51E3ECECA008EBFB3 /* PracticeCell2.swift */; };
+		0211B1B81E3ECECA008EBFB3 /* PracticeCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0211B1B61E3ECECA008EBFB3 /* PracticeCell2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		0211B1A01E3EB774008EBFB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0211B1A31E3EB774008EBFB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0211B1A51E3EB774008EBFB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0211B1AB1E3EBF20008EBFB3 /* GridFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridFlowLayout.swift; path = ../GridFlowLayout.swift; sourceTree = "<group>"; };
+		0211B1AD1E3EBF9C008EBFB3 /* ListFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFlowLayout.swift; sourceTree = "<group>"; };
+		0211B1B11E3ECEB7008EBFB3 /* PracticeCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeCell1.swift; sourceTree = "<group>"; };
+		0211B1B21E3ECEB7008EBFB3 /* PracticeCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PracticeCell1.xib; sourceTree = "<group>"; };
+		0211B1B51E3ECECA008EBFB3 /* PracticeCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeCell2.swift; sourceTree = "<group>"; };
+		0211B1B61E3ECECA008EBFB3 /* PracticeCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PracticeCell2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,8 @@
 		0211B1951E3EB774008EBFB3 /* Grid to List Flow */ = {
 			isa = PBXGroup;
 			children = (
+				0211B1AB1E3EBF20008EBFB3 /* GridFlowLayout.swift */,
+				0211B1AD1E3EBF9C008EBFB3 /* ListFlowLayout.swift */,
 				0211B1961E3EB774008EBFB3 /* AppDelegate.swift */,
 				0211B1981E3EB774008EBFB3 /* ViewController.swift */,
 				0211B19A1E3EB774008EBFB3 /* Main.storyboard */,
@@ -63,6 +77,10 @@
 				0211B1A21E3EB774008EBFB3 /* LaunchScreen.storyboard */,
 				0211B1A51E3EB774008EBFB3 /* Info.plist */,
 				0211B19D1E3EB774008EBFB3 /* Grid_to_List_Flow.xcdatamodeld */,
+				0211B1B11E3ECEB7008EBFB3 /* PracticeCell1.swift */,
+				0211B1B21E3ECEB7008EBFB3 /* PracticeCell1.xib */,
+				0211B1B51E3ECECA008EBFB3 /* PracticeCell2.swift */,
+				0211B1B61E3ECECA008EBFB3 /* PracticeCell2.xib */,
 			);
 			path = "Grid to List Flow";
 			sourceTree = "<group>";
@@ -127,7 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0211B1A41E3EB774008EBFB3 /* LaunchScreen.storyboard in Resources */,
+				0211B1B81E3ECECA008EBFB3 /* PracticeCell2.xib in Resources */,
 				0211B1A11E3EB774008EBFB3 /* Assets.xcassets in Resources */,
+				0211B1B41E3ECEB7008EBFB3 /* PracticeCell1.xib in Resources */,
 				0211B19C1E3EB774008EBFB3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,9 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0211B1AE1E3EBF9C008EBFB3 /* ListFlowLayout.swift in Sources */,
 				0211B1991E3EB774008EBFB3 /* ViewController.swift in Sources */,
+				0211B1B31E3ECEB7008EBFB3 /* PracticeCell1.swift in Sources */,
 				0211B19F1E3EB774008EBFB3 /* Grid_to_List_Flow.xcdatamodeld in Sources */,
+				0211B1B71E3ECECA008EBFB3 /* PracticeCell2.swift in Sources */,
 				0211B1971E3EB774008EBFB3 /* AppDelegate.swift in Sources */,
+				0211B1AC1E3EBF20008EBFB3 /* GridFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
