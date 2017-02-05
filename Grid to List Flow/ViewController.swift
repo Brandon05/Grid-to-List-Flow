@@ -54,15 +54,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     @IBAction func onSwitch(_ sender: Any) {
         
-        if(self.isGridFlowLayoutUsed){
+        self.collectionView.scrollToTop(animated: false, completion: {
+    
+           if(self.isGridFlowLayoutUsed){
             self.isGridFlowLayoutUsed = false
             UIApplication.shared.beginIgnoringInteractionEvents()
-            fadeOutGrid()
+            self.fadeOutGrid()
         } else {
             self.isGridFlowLayoutUsed = true
             UIApplication.shared.beginIgnoringInteractionEvents()
-            fadeOutList()
+            self.fadeOutList()
         }
+        })
+        
+        
     }
 
 // MARK:- CollectionViewFlowLayout Animations
@@ -73,7 +78,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Fade in the view
         UIView.animate(withDuration: animationDuration, animations: { () -> Void in
             self.collectionView.alpha = 0
-            
+//            self.collectionView.scrollToTop(animated: false, completion: {
+//            })
+            //self.collectionView.scrollToTop(animated: true)
         }) { (Bool) -> Void in
             
             // After the animation completes, fade out the view after a delay
@@ -89,9 +96,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Fade in the view
         UIView.animate(withDuration: animationDuration, animations: { () -> Void in
             self.collectionView.alpha = 0
-            
+//            self.collectionView.scrollToTop(animated: false, completion: {
+//            })
         }) { (Bool) -> Void in
-            self.collectionView.collectionViewLayout.invalidateLayout() //neccesary to avoid autolayout loop
+                self.collectionView.collectionViewLayout.invalidateLayout() //neccesary to avoid autolayout loop
             // After the animation completes, fade out the view after a delay
             self.collectionView.reloadData() {
                 self.loadListView() // must be called after new cells are loaded
@@ -141,7 +149,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 }
 
-// MARK: - UICollectionViewDataSource
+// MARK: - UICollectionView Methods
 
 extension ViewController {
     
@@ -205,6 +213,10 @@ extension ViewController {
         
         return CGSize.zero
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detail", sender: self)
+    }
 }
 
 /*
@@ -219,5 +231,13 @@ extension UICollectionView {
     }
     
     
+}
+
+extension UIScrollView {
+    func scrollToTop(animated: Bool, completion: @escaping () -> Void) {
+        let topOffset = CGPoint(x: 0, y: -contentInset.top)
+        UIView.animate(withDuration: 0, animations: { self.setContentOffset(topOffset, animated: animated) })
+        { _ in completion() }
+    }
 }
 
