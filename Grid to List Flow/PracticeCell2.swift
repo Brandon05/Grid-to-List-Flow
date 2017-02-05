@@ -16,16 +16,17 @@ class PracticeCell2: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        self.backgroundColor = UIColor.red
-        self.contentView.autoresizingMask = .flexibleWidth
-        //self.translatesAutoresizingMaskIntoConstraints = false
-        //cellWidth = NSLayoutConstraint(item: testView, attribute: .width, relatedBy: .equal, toItem: superview, attribute: .width, multiplier: 1, constant: 5)
     }
     
     override func prepareForReuse() {
-        //self.translatesAutoresizingMaskIntoConstraints = false
+        //super.prepareForReuse()
+        //Not sure why: stops autolayout loop
     }
     
+    /*
+     Allows you to generate a cell without dequeueing one from a table view.
+     - Returns: The cell loaded from its nib file.
+     */
     class func fromNib() -> PracticeCell2?
     {
         var cell: PracticeCell2?
@@ -38,18 +39,13 @@ class PracticeCell2: UICollectionViewCell {
         return cell
     }
     
-    func configureWithIndexPath(_ indexPath: IndexPath)
-    {
+    /*
+     Configure data from model and set style
+     */
+    func configureWithIndexPath(_ indexPath: IndexPath) {
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
         backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
-        //self.contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        let cellWidth = UIScreen.main.bounds.width - 10
-        print(cellWidth)
-        let widthConstraint = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: cellWidth)
-        //self.contentView.addConstraint(widthConstraint)
-        //label.text = labelTextWithNum(indexPath.item + 1)
-        //label.preferredMaxLayoutWidth = 50
     }
 
 }
