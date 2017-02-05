@@ -37,21 +37,21 @@ class ProductsListFlowLayout: UICollectionViewFlowLayout {
         minimumInteritemSpacing = 10
         minimumLineSpacing = 5
         scrollDirection = .vertical
-        sectionInset = UIEdgeInsets(top:1,left:8,bottom:10,right:8)
+        sectionInset = UIEdgeInsets(top:1,left:0,bottom:10,right:0)
     }
     
     func itemWidth() -> CGFloat {
-        return collectionView!.frame.width - 16
+        return collectionView!.frame.width - 10
     }
     
-    override var itemSize: CGSize {
-        set {
-            self.itemSize = CGSize(width: itemWidth(), height: itemHeight)
-        }
-        get {
-            return CGSize(width: itemWidth(), height: itemHeight)
-        }
-    }
+//    override var itemSize: CGSize {
+//        set {
+//            self.itemSize = CGSize(width: itemWidth(), height: itemHeight)
+//        }
+//        get {
+//            return CGSize(width: itemWidth(), height: itemHeight)
+//        }
+//    }
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
         return collectionView!.contentOffset
